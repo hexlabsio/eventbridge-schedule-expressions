@@ -1,0 +1,40 @@
+{
+  "name": "@hexlabs/eventbridge-schedule-expressions",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc ./test/scheduled-expressions.ts",
+    "format": "prettier --single-quote --trailing-comma all --check './src/**.{ts,tsx}' './src/**/**.{ts,tsx}' './test/**.{ts,tsx}' './test/**/**.{ts,tsx}'",
+    "format:fix": "prettier --single-quote --trailing-comma all --write './src/**.{ts,tsx}' './src/**/**.{ts,tsx}' './test/**.{ts,tsx}' './test/**/**.{ts,tsx}'",
+    "lint": "eslint **/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hexlabsio/eventbridge-schedule-expressions.git"
+  },
+  "author": "HexLabs",
+  "bugs": {
+    "url": "https://https://github.com/hexlabsio/eventbridge-schedule-expressions/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test && npm outdated"
+    }
+  },
+  "homepage": "https://github.com/hexlabsio/eventbridge-schedule-expressions/README.md",
+  "devDependencies": {
+    "@types/node": "^16.18.8",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0",
+    "prettier": "^2.8.1",
+    "husky": "^6.0.0",
+    "typescript": "^4.8"
+  }
+}
